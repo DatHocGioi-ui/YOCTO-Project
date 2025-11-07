@@ -11,11 +11,15 @@ I. Set-up
 
 	source oe-init-build-env
 	
-4. Update Your Local Configuration File
+4. Update Your Local Configuration File and BB Layers File
 
 	vim /poky/build/conf/local.conf
 	
    Anh chỉnh lại các biến DL_DIR, SSTATE_DIR, TMPDIR thành đường dẫn lần lượt của các thu mục downloads, sstate-cache, tmp trong file local.conf. 
+
+	vim /poky/build/bblayers.conf
+
+   Anh sửa lại các đường dẫn tới các layers ở biến BBLAYERS cho đúng với máy anh
 
 5. Start the build
 
