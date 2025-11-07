@@ -1,0 +1,20 @@
+--- am335x-boneblack.dts.old	2025-11-05 14:21:51.834902049 +0700
++++ am335x-boneblack.dts	2025-11-05 14:28:05.557797456 +0700
+@@ -169,4 +169,17 @@
+ 		"NC";
+ };
+ 
++&i2c2 {
++    status = "okay";
++    pinctrl-names = "default";
++    pinctrl-0 = <&i2c2_pins>;
++};
+ 
++&am33xx_pinmux {
++    i2c2_pins: pinmux_i2c2_pins {
++        pinctrl-single,pins = <
++            0x158 0x33  /* P9_19 - I2C2_SCL - mode 3 + pull-up */
++            0x15C 0x33  /* P9_20 - I2C2_SDA - mode 3 + pull-up */
++        >;
++    };
++};
